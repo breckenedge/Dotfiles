@@ -1,0 +1,15 @@
+[core]
+	excludesfile = ~/.gitignore
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	unstage = reset HEAD --
+	last = log -1 HEAD
+[push]
+	default = current
+[init]
+	defaultBranch = main
+[pull]
+	ff = only
