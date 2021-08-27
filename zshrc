@@ -7,12 +7,21 @@ parse_git_branch() {
 setopt PROMPT_SUBST
 PROMPT='%F{green}%~%f%F{red}$(parse_git_branch)%f %# '
 
-alias stop-containers="docker ps -q | xargs docker stop"
-
 # Aliases
-alias a="ag --width 120"
+alias ag="rg"
+
 alias e="vim"
-alias g='git'
+
+alias g="git"
+alias gb="git for-each-ref --sort=committerdate refs/heads/ --format='%(committerdate:short) %(refname:short)'"
+alias gca="git commit --amend"
+alias gd="git branch -d"
+alias gD="git branch -D"
+alias gf="git fetch"
+alias gfa="git fetch --all"
+alias gp="git push"
+alias gpf="git push --force-with-lease"
+alias gs="git status"
 
 # Enable zsh-completions
 fpath=(/usr/local/share/zsh-completions $fpath)
@@ -23,3 +32,9 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Make ctrl-space accept the zsh-autosuggestions suggestion
 bindkey '^ ' autosuggest-accept
 
+# Launch VS Code via `code` command
+code () {
+  VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $*;
+}
+
+eval "$(rbenv init -)"
