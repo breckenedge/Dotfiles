@@ -23,12 +23,6 @@ alias gp="git push"
 alias gpf="git push --force-with-lease"
 alias gs="git status"
 
-# Enable zsh-completions
-fpath=(/usr/local/share/zsh-completions $fpath)
-
-# Enable zsh-autosuggestions
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 # Make ctrl-space accept the zsh-autosuggestions suggestion
 bindkey '^ ' autosuggest-accept
 
@@ -38,3 +32,5 @@ code () {
 }
 
 eval "$(rbenv init -)"
+
+export PATH="/Users/aaron/.bin:$PATH"

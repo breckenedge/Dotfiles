@@ -13,3 +13,6 @@
 	defaultBranch = main
 [pull]
 	ff = only
+[user]
+	email = aaron@breckenridge.dev
+	name = Aaron Breckenridge
