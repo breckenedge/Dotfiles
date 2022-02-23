@@ -31,6 +31,6 @@ code () {
   VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $*;
 }
 
-eval "$(rbenv init -)"
-
 export PATH="/Users/aaron/.bin:$PATH"
+
+. /usr/local/opt/asdf/libexec/asdf.sh
